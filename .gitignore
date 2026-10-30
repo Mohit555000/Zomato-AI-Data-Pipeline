@@ -1,0 +1,11 @@
+creds/*
+venv/
+path/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+zomato/target/
+zomato/dbt_packages/
+zomato/logs/
+logs/

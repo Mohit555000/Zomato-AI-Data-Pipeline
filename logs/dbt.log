@@ -1,0 +1,149 @@
+[0m16:41:47.285140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b2a1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096ab4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096ab110>]}
+
+
+============================== 16:41:47.288915 | dbfde4da-ee22-4939-a695-4aa9520b7de7 ==============================
+[0m16:41:47.288915 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:41:47.289332 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'partial_parse': 'True', 'profiles_dir': '/Users/mohitchandangangwani/.dbt', 'use_colors': 'True', 'no_print': 'None', 'printer_width': '80', 'debug': 'False', 'log_path': 'logs', 'static_parser': 'True', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error': 'None', 'target_path': 'None', 'invocation_command': 'dbt init zomato', 'introspect': 'True', 'empty': 'None'}
+[0m16:41:47.300323 [info ] [MainThread]: Creating dbt configuration folder at /Users/mohitchandangangwani/.dbt
+[0m16:41:47.302227 [debug] [MainThread]: Starter project path: /Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:41:47.307052 [info ] [MainThread]: Setting up your profile.
+[0m16:42:21.830234 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:42:21.830889 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:42:21.831090 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:47:20.716339 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m16:47:20.728733 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/task/init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/task/init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/task/init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/task/init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/click/termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/click/termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:47:20.984849 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 333.76096, "process_in_blocks": "0", "process_kernel_time": 0.260017, "process_mem_max_rss": "139837440", "process_out_blocks": "0", "process_user_time": 1.169746}
+[0m16:47:20.988164 [debug] [MainThread]: Command `dbt init` failed at 16:47:20.987944 after 333.76 seconds
+[0m16:47:20.989166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bf5f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10adbef30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108962330>]}
+[0m16:47:20.989861 [debug] [MainThread]: Flushing usage events
+[0m16:47:21.177527 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:47:34.377347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d698e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097834a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109783110>]}
+
+
+============================== 16:47:34.381819 | 98507342-940d-4708-8e73-a3d918d93132 ==============================
+[0m16:47:34.381819 [info ] [MainThread]: Running with dbt=1.12.6
+[0m16:47:34.382240 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'fail_fast': 'False', 'hints_enabled': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'log_cache_events': 'False', 'debug': 'False', 'maximum_seed_size_mib': '1', 'no_print': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'cache_selected_only': 'False', 'profiles_dir': '/Users/mohitchandangangwani/.dbt', 'log_path': 'logs', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'invocation_command': 'dbt init zomato', 'partial_parse': 'True', 'write_json': 'True', 'target_path': 'None', 'quiet': 'False'}
+[0m16:47:34.396284 [debug] [MainThread]: Starter project path: /Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:47:34.402736 [info ] [MainThread]: Setting up your profile.
+[0m16:47:36.788426 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:47:36.788769 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:47:36.788970 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:50:20.612450 [info ] [MainThread]: Profile zomato written to /Users/mohitchandangangwani/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m16:50:20.618852 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m16:50:20.620003 [info ] [MainThread]: dbt version: 1.12.6
+[0m16:50:20.620294 [info ] [MainThread]: python version: 3.12.16
+[0m16:50:20.620484 [info ] [MainThread]: python path: /Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/venv/bin/python3.12
+[0m16:50:20.620772 [info ] [MainThread]: os info: macOS-26.6.2-arm64-arm-64bit
+[0m16:50:20.664373 [info ] [MainThread]: Using profiles dir at /Users/mohitchandangangwani/.dbt
+[0m16:50:20.664773 [info ] [MainThread]: Using profiles.yml file at /Users/mohitchandangangwani/.dbt/profiles.yml
+[0m16:50:20.664966 [info ] [MainThread]: Using dbt_project.yml file at /Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/zomato/dbt_project.yml
+[0m16:50:20.665807 [info ] [MainThread]: adapter type: snowflake
+[0m16:50:20.666090 [info ] [MainThread]: adapter version: 1.12.4
+[0m16:50:20.731274 [info ] [MainThread]: Configuration:
+[0m16:50:20.731642 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:50:20.731821 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:50:20.731976 [info ] [MainThread]: Required dependencies:
+[0m16:50:20.732279 [debug] [MainThread]: Executing "git --help"
+[0m16:50:20.760789 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:50:20.761534 [debug] [MainThread]: STDERR: "b''"
+[0m16:50:20.761774 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:50:20.761992 [info ] [MainThread]: Connection:
+[0m16:50:20.762216 [info ] [MainThread]:   account: SLWGCPZ-DQ63472
+[0m16:50:20.762370 [info ] [MainThread]:   user: MCG9877@NYU.EDU
+[0m16:50:20.762548 [info ] [MainThread]:   database: ZOMATO_WH
+[0m16:50:20.762691 [info ] [MainThread]:   warehouse: ZOMATO_WH
+[0m16:50:20.762828 [info ] [MainThread]:   role: DBT_ROLE
+[0m16:50:20.762977 [info ] [MainThread]:   schema: STAGING
+[0m16:50:20.763126 [info ] [MainThread]:   authenticator: externalbrowser
+[0m16:50:20.763280 [info ] [MainThread]:   oauth_client_id: None
+[0m16:50:20.763423 [info ] [MainThread]:   query_tag: None
+[0m16:50:20.763557 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:50:20.763690 [info ] [MainThread]:   host: None
+[0m16:50:20.763827 [info ] [MainThread]:   port: None
+[0m16:50:20.763959 [info ] [MainThread]:   proxy_host: None
+[0m16:50:20.764092 [info ] [MainThread]:   proxy_port: None
+[0m16:50:20.764224 [info ] [MainThread]:   protocol: None
+[0m16:50:20.764357 [info ] [MainThread]:   connect_retries: 1
+[0m16:50:20.764489 [info ] [MainThread]:   connect_timeout: None
+[0m16:50:20.764617 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:50:20.764748 [info ] [MainThread]:   retry_all: False
+[0m16:50:20.764886 [info ] [MainThread]:   insecure_mode: False
+[0m16:50:20.765016 [info ] [MainThread]:   reuse_connections: True
+[0m16:50:20.765173 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:50:20.765305 [info ] [MainThread]:   workload_identity_provider: None
+[0m16:50:20.765436 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m16:50:20.765570 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m16:50:20.766148 [info ] [MainThread]: Registered adapter: snowflake=1.12.4
+[0m16:50:20.869481 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:50:20.871901 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:50:20.872138 [debug] [MainThread]: On debug: select 1 as id
+[0m16:50:20.872310 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:50:21.261574 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m16:50:21.261905 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m16:50:21.262148 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:50:21.262374 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:50:21.262548 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  390190 (08001): Failed to connect to DB: SLWGCPZ-DQ63472.snowflakecomputing.com:443, There was an error related to the SAML Identity Provider account parameter. Contact Snowflake support.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:50:21.262831 [info ] [MainThread]: Your new dbt project "zomato" was created!
+Initialized new project in /Users/mohitchandangangwani/Desktop/developer/Data Engineering Projects/zomato-AI-data-pipeline/zomato/zomato
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:50:21.263021 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m16:50:21.266022 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 166.95737, "process_in_blocks": "0", "process_kernel_time": 0.385263, "process_mem_max_rss": "146194432", "process_out_blocks": "0", "process_user_time": 1.411551}
+[0m16:50:21.266633 [debug] [MainThread]: Command `dbt init` succeeded at 16:50:21.266530 after 166.96 seconds
+[0m16:50:21.266869 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:50:21.267021 [debug] [MainThread]: On debug: No close available on handle
+[0m16:50:21.267273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10854bbf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e85e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0faab0>]}
+[0m16:50:21.267581 [debug] [MainThread]: Flushing usage events
+[0m16:50:21.511683 [debug] [MainThread]: An error was encountered while trying to flush usage events
